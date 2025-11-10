@@ -2,39 +2,26 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8">
-  <title>660000 출항</title>
+  <title>Audio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body {
+    html, body {
       margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #111;
-      color: #fff;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-    .box {
-      text-align: center;
-    }
-    h2 {
-      margin-bottom: 1rem;
+      padding: 0;
+      background: transparent; /* 노션 배경 그대로 */
     }
     audio {
-      width: 320px;
-      max-width: 90vw;
-      outline: none;
+      width: 100%;
+      max-width: 500px; /* PC에선 500px까지 */
+      display: block;
+      margin: auto;
     }
   </style>
 </head>
 <body>
-  <div class="box">
-    <h2>660000 출항</h2>
-    <audio controls controlsList="nodownload">
-      <source src="660000 출항.mp3" type="audio/mpeg">
-      브라우저에서 오디오 태그를 지원하지 않습니다.
-    </audio>
-  </div>
+  <audio controls controlsList="nodownload">
+    <source src="660000 출항.mp3" type="audio/mpeg">
+    브라우저에서 오디오를 지원하지 않습니다.
+  </audio>
 </body>
 </html>

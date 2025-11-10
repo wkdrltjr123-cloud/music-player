@@ -17,6 +17,26 @@
       outline: none;
     }
   </style>
+      <!-- ✅ 기능 스크립트 추가 -->
+  <script>
+    // 우클릭 방지
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    // 드래그 방지
+    document.addEventListener('dragstart', event => event.preventDefault());
+    // F12, Ctrl+Shift+I, Ctrl+U, Ctrl+Shift+J 차단
+    document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.key === 'U') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        return false;
+      }
+    });
+  </script>
+  <!-- ✅ 끝 -->
 </head>
 <body>
   <audio controls controlsList="nodownload">
@@ -25,3 +45,4 @@
   </audio>
 </body>
 </html>
+

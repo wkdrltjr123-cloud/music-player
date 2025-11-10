@@ -4,9 +4,36 @@
   <meta charset="utf-8">
   <title>Audio Player</title>
   <style>
-    html, body {margin: 0; padding: 0; background: transparent;}
-    audio {width: 320px; height: 40px; display: block; margin: 0; outline: none;}
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      user-select: none; /* 텍스트 선택 방지 */
+    }
+    audio {
+      width: 320px;
+      height: 40px;
+      display: block;
+      margin: 0;
+      outline: none;
+    }
   </style>
+  <script>
+    // 우클릭 방지
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    // 드래그 방지
+    document.addEventListener('dragstart', event => event.preventDefault());
+    // F12, Ctrl+Shift+I, Ctrl+U 등 차단
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'F12' || 
+          (e.ctrlKey && e.shiftKey && e.key === 'I') || 
+          (e.ctrlKey && e.key === 'U') || 
+          (e.ctrlKey && e.shiftKey && e.key === 'J')) {
+        e.preventDefault();
+        return false;
+      }
+    });
+  </script>
 </head>
 <body>
   <audio controls controlsList="nodownload">

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>Music Player</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #111;
+      color: #fff;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    .box {
+      text-align: center;
+    }
+    audio {
+      width: 320px;
+      max-width: 90vw;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>Music Player</h2>
+    <audio controls controlsList="nodownload">
+      <source src="https://drive.google.com/uc?export=download&id=1zpwKcy-fPANq8UIWn0skbu3p75QQtZd_" type="audio/mpeg">
+      브라우저에서 오디오 태그를 지원하지 않습니다.
+    </audio>
+  </div>
+</body>
+</html>

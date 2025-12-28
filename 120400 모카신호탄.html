@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>Audio Player</title>
+  <style>
+    
+    html, body {margin: 0; padding: 0; background: transparent;}
+    
+    audio {width: 320px; height: 40px; display: block; margin: 0; outline: none;}
+  
+  </style>
+  <!-- ✅ 기능 스크립트 추가 -->
+  <script>
+    // 우클릭 방지
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    // 드래그 방지
+    document.addEventListener('dragstart', event => event.preventDefault());
+    // F12, Ctrl+Shift+I, Ctrl+U, Ctrl+Shift+J 차단
+    document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.key === 'U') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        return false;
+      }
+    });
+  </script>
+  <!-- ✅ 끝 -->
+
+
+
+  
+</head>
+
+  <body>
+  
+    <audio controls controlsList="nodownload">
+    <source src="120400 모카신호탄.mp3" type="audio/mpeg">
+    브라우저에서 오디오를 지원하지 않습니다.
+  </audio>
+</body>
+</html>
